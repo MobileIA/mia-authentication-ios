@@ -15,6 +15,7 @@
 		D6401F7B208E943700D87FAB /* MIAAuthBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6401F76208E943700D87FAB /* MIAAuthBaseService.swift */; };
 		D6401F7C208E943700D87FAB /* MIAAuthRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6401F78208E943700D87FAB /* MIAAuthRest.swift */; };
 		D6401F7D208E943700D87FAB /* MIAAuthRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6401F7A208E943700D87FAB /* MIAAuthRealm.swift */; };
+		D6401F7F208E95A200D87FAB /* MobileiaAuthenticationCore.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D6401F7E208E95A200D87FAB /* MobileiaAuthenticationCore.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		D6401F76208E943700D87FAB /* MIAAuthBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIAAuthBaseService.swift; sourceTree = "<group>"; };
 		D6401F78208E943700D87FAB /* MIAAuthRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIAAuthRest.swift; sourceTree = "<group>"; };
 		D6401F7A208E943700D87FAB /* MIAAuthRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIAAuthRealm.swift; sourceTree = "<group>"; };
+		D6401F7E208E95A200D87FAB /* MobileiaAuthenticationCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MobileiaAuthenticationCore.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		D6401F58208E93C200D87FAB /* MobileiaAuthenticationCore */ = {
 			isa = PBXGroup;
 			children = (
+				D6401F7E208E95A200D87FAB /* MobileiaAuthenticationCore.podspec */,
 				D6401F79208E943700D87FAB /* Realm */,
 				D6401F77208E943700D87FAB /* Rest */,
 				D6401F75208E943700D87FAB /* Service */,
@@ -225,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6401F7F208E95A200D87FAB /* MobileiaAuthenticationCore.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +405,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MobileiaAuthenticationCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,6 +432,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MobileiaAuthenticationCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

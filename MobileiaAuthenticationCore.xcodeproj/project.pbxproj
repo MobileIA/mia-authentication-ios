@@ -10,6 +10,11 @@
 		D6401F60208E93C200D87FAB /* MobileiaAuthenticationCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6401F56208E93C200D87FAB /* MobileiaAuthenticationCore.framework */; };
 		D6401F65208E93C200D87FAB /* MobileiaAuthenticationCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6401F64208E93C200D87FAB /* MobileiaAuthenticationCoreTests.swift */; };
 		D6401F67208E93C200D87FAB /* MobileiaAuthenticationCore.h in Headers */ = {isa = PBXBuildFile; fileRef = D6401F59208E93C200D87FAB /* MobileiaAuthenticationCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6401F73208E942C00D87FAB /* MIAUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6401F71208E942C00D87FAB /* MIAUser.swift */; };
+		D6401F74208E942C00D87FAB /* MIAAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6401F72208E942C00D87FAB /* MIAAccessToken.swift */; };
+		D6401F7B208E943700D87FAB /* MIAAuthBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6401F76208E943700D87FAB /* MIAAuthBaseService.swift */; };
+		D6401F7C208E943700D87FAB /* MIAAuthRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6401F78208E943700D87FAB /* MIAAuthRest.swift */; };
+		D6401F7D208E943700D87FAB /* MIAAuthRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6401F7A208E943700D87FAB /* MIAAuthRealm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		D6401F5F208E93C200D87FAB /* MobileiaAuthenticationCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileiaAuthenticationCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6401F64208E93C200D87FAB /* MobileiaAuthenticationCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileiaAuthenticationCoreTests.swift; sourceTree = "<group>"; };
 		D6401F66208E93C200D87FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6401F71208E942C00D87FAB /* MIAUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIAUser.swift; sourceTree = "<group>"; };
+		D6401F72208E942C00D87FAB /* MIAAccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIAAccessToken.swift; sourceTree = "<group>"; };
+		D6401F76208E943700D87FAB /* MIAAuthBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIAAuthBaseService.swift; sourceTree = "<group>"; };
+		D6401F78208E943700D87FAB /* MIAAuthRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIAAuthRest.swift; sourceTree = "<group>"; };
+		D6401F7A208E943700D87FAB /* MIAAuthRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIAAuthRealm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,10 @@
 		D6401F58208E93C200D87FAB /* MobileiaAuthenticationCore */ = {
 			isa = PBXGroup;
 			children = (
+				D6401F79208E943700D87FAB /* Realm */,
+				D6401F77208E943700D87FAB /* Rest */,
+				D6401F75208E943700D87FAB /* Service */,
+				D6401F70208E93E900D87FAB /* Entity */,
 				D6401F59208E93C200D87FAB /* MobileiaAuthenticationCore.h */,
 				D6401F5A208E93C200D87FAB /* Info.plist */,
 			);
@@ -84,6 +98,39 @@
 				D6401F66208E93C200D87FAB /* Info.plist */,
 			);
 			path = MobileiaAuthenticationCoreTests;
+			sourceTree = "<group>";
+		};
+		D6401F70208E93E900D87FAB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D6401F72208E942C00D87FAB /* MIAAccessToken.swift */,
+				D6401F71208E942C00D87FAB /* MIAUser.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D6401F75208E943700D87FAB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D6401F76208E943700D87FAB /* MIAAuthBaseService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D6401F77208E943700D87FAB /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				D6401F78208E943700D87FAB /* MIAAuthRest.swift */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
+		D6401F79208E943700D87FAB /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				D6401F7A208E943700D87FAB /* MIAAuthRealm.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +195,7 @@
 				TargetAttributes = {
 					D6401F55208E93C200D87FAB = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					D6401F5E208E93C200D87FAB = {
 						CreatedOnToolsVersion = 9.3;
@@ -194,6 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6401F73208E942C00D87FAB /* MIAUser.swift in Sources */,
+				D6401F7B208E943700D87FAB /* MIAAuthBaseService.swift in Sources */,
+				D6401F74208E942C00D87FAB /* MIAAccessToken.swift in Sources */,
+				D6401F7D208E943700D87FAB /* MIAAuthRealm.swift in Sources */,
+				D6401F7C208E943700D87FAB /* MIAAuthRest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +392,7 @@
 		D6401F6B208E93C200D87FAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,6 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobileia.MobileiaAuthenticationCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +418,7 @@
 		D6401F6C208E93C200D87FAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +443,7 @@
 		D6401F6E208E93C200D87FAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobileiaAuthenticationCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +461,7 @@
 		D6401F6F208E93C200D87FAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobileiaAuthenticationCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

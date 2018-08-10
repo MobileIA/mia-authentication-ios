@@ -41,8 +41,16 @@ open class MIAUser : Object, Decodable {
      open required convenience init(from decoder: Decoder) throws {
         self.init();
         let container = try decoder.container(keyedBy: MIAUserEnum.self);
-        id = try container.decode(Int.self, forKey: .id)
-        app_id = try container.decode(Int.self, forKey: .app_id)
+        do{
+            id = try container.decode(Int.self, forKey: .id)
+        }catch{
+            id = Int(try container.decode(String.self, forKey: .id))!;
+        }
+        do{
+            app_id = try container.decode(Int.self, forKey: .app_id)
+        }catch{
+            app_id = Int(try container.decode(String.self, forKey: .app_id))!;
+        }
         email = try container.decode(String.self, forKey: .email)
         firstname = try container.decode(String.self, forKey: .firstname)
         lastname = try container.decode(String.self, forKey: .lastname)

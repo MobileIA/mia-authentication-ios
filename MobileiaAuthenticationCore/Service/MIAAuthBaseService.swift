@@ -18,7 +18,7 @@ open class MIAAuthBaseService : NSObject {
     open var callbackAccessTokenSuccess : ((_ object: MIAAccessToken) -> Void)?;
     open var callbackAccessTokenError : ((_ error: MIAErrorRest) -> Void)?;
     
-    open var callbackNewAccountSuccess : ((_ object: Int) -> Void)?;
+    open var callbackNewAccountSuccess : ((_ object: MIAUser) -> Void)?;
     
     open required override init() {
         super.init();

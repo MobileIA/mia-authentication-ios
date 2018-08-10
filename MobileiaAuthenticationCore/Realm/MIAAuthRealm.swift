@@ -29,6 +29,12 @@ open class MIAAuthRealm : MIABaseRealm {
         return users.first;
     }
     
+    open func deleteAllUsers(){
+        let realm = getRealm();
+        let users = realm.objects(MIAUser.self);
+        realm.delete(users);
+    }
+    
     open override func getNameFile() -> String {
         return "mobileia_authentication_" + String(Mobileia.getInstance().appId);
     }

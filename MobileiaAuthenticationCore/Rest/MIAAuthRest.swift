@@ -19,11 +19,23 @@ open class MIAAuthRest : MIABaseRest {
         execute("api/oauth", method: .post, parameters: parameters, callback: callback, callbackError: callbackError);
     }
     
-    open func register(parameters : Parameters, callback: @escaping (_ object: Int) -> Void, callbackError: @escaping (_ error: MIAErrorRest) -> Void) -> Void{
+    open func register(parameters : Parameters, callback: @escaping (_ object: MIAUser) -> Void, callbackError: @escaping (_ error: MIAErrorRest) -> Void) -> Void{
         // Procesamos los parametros
         let parameters = processParameters(parameters: parameters);
         // Ejecutamos llamada
         execute("api/register", method: .post, parameters: parameters, callback: callback, callbackError: callbackError);
+    }
+    
+    open func update(accessToken : String, user: MIAUser, callback: @escaping (_ object: MIAUser) -> Void, callbackError: @escaping (_ error: MIAErrorRest) -> Void) -> Void{
+        // Procesamos los parametros
+        var parameters = processParameters(parameters: [:]);
+        parameters["access_token"] = accessToken;
+        parameters["firstname"] = user.firstname;
+        parameters["lastname"] = user.lastname;
+        parameters["photo"] = user.photo;
+        parameters["phone"] = user.phone;
+        // Ejecutamos llamada
+        execute("api/update", method: .post, parameters: parameters, callback: callback, callbackError: callbackError);
     }
     
     open func me(accessToken : String, callback: @escaping (_ object: MIAUser) -> Void, callbackError: @escaping (_ error: MIAErrorRest) -> Void) -> Void{
@@ -54,6 +66,6 @@ open class MIAAuthRest : MIABaseRest {
     }
     
     open override func getBaseUrl() -> String {
-        return "http://authentication.mobileia.com/";
+        return "https://authentication.mobileia.com/";
     }
 }

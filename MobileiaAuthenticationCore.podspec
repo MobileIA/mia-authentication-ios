@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MobileiaAuthenticationCore"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
+  s.swift_version = "4.0"
   s.summary      = "Libreria Authentication Core para MobileIA"
 
   # This description is used to generate tags and improve search results.
@@ -81,7 +82,7 @@ Esta la base para la creacion de servicios de autenticacion y librerias que son 
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/MobileIA/mia-authentication-ios.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/MobileIA/mia-authentication-ios.git", :tag => "0.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -134,7 +135,7 @@ Esta la base para la creacion de servicios de autenticacion y librerias que son 
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-# s.dependency "PureLayout"
+    s.dependency "PureLayout"
     s.dependency "RealmSwift"
     s.dependency "Alamofire", "~> 4.5"
     s.dependency "AlamofireImage", "~> 3.3"

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileiaCore
 
 open class MIAAuthBaseService : NSObject {
     
@@ -20,7 +21,7 @@ open class MIAAuthBaseService : NSObject {
     
     open var callbackNewAccountSuccess : ((_ object: MIAUser) -> Void)?;
     
-    open required override init() {
+    public required override init() {
         super.init();
         // Creamos callback requeridos para obtener accessToken
         self.callbackAccessTokenSuccess = { (object:MIAAccessToken) in
@@ -40,7 +41,7 @@ open class MIAAuthBaseService : NSObject {
             }
         };
         // Creamos callback requeridos para registrar nuevas cuentas
-        self.callbackNewAccountSuccess = { (object:Int) in
+        self.callbackNewAccountSuccess = { (object:MIAUser) in
             // Al registrar una nueva cuenta realizamos el login por default
             self.requestAccessToken();
         };

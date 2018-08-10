@@ -38,7 +38,7 @@ open class MIAUser : Object, Decodable {
         case created_at
      }
      
-     open required convenience init(from decoder: Decoder) throws {
+    public required convenience init(from decoder: Decoder) throws {
         self.init();
         let container = try decoder.container(keyedBy: MIAUserEnum.self);
         do{

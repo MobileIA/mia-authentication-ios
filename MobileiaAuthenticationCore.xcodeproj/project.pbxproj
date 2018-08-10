@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D62BD2A5211D362C0084E69E /* MobileiaAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62BD2A4211D362C0084E69E /* MobileiaAuthentication.swift */; };
 		D6401F60208E93C200D87FAB /* MobileiaAuthenticationCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6401F56208E93C200D87FAB /* MobileiaAuthenticationCore.framework */; };
 		D6401F65208E93C200D87FAB /* MobileiaAuthenticationCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6401F64208E93C200D87FAB /* MobileiaAuthenticationCoreTests.swift */; };
 		D6401F67208E93C200D87FAB /* MobileiaAuthenticationCore.h in Headers */ = {isa = PBXBuildFile; fileRef = D6401F59208E93C200D87FAB /* MobileiaAuthenticationCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D62BD2A4211D362C0084E69E /* MobileiaAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileiaAuthentication.swift; sourceTree = "<group>"; };
 		D6401F56208E93C200D87FAB /* MobileiaAuthenticationCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobileiaAuthenticationCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6401F59208E93C200D87FAB /* MobileiaAuthenticationCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileiaAuthenticationCore.h; sourceTree = "<group>"; };
 		D6401F5A208E93C200D87FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		D6401F58208E93C200D87FAB /* MobileiaAuthenticationCore */ = {
 			isa = PBXGroup;
 			children = (
+				D62BD2A4211D362C0084E69E /* MobileiaAuthentication.swift */,
 				D6401F7E208E95A200D87FAB /* MobileiaAuthenticationCore.podspec */,
 				D6401F79208E943700D87FAB /* Realm */,
 				D6401F77208E943700D87FAB /* Rest */,
@@ -249,6 +252,7 @@
 				D6401F73208E942C00D87FAB /* MIAUser.swift in Sources */,
 				D6401F7B208E943700D87FAB /* MIAAuthBaseService.swift in Sources */,
 				D6401F74208E942C00D87FAB /* MIAAccessToken.swift in Sources */,
+				D62BD2A5211D362C0084E69E /* MobileiaAuthentication.swift in Sources */,
 				D6401F7D208E943700D87FAB /* MIAAuthRealm.swift in Sources */,
 				D6401F7C208E943700D87FAB /* MIAAuthRest.swift in Sources */,
 			);

@@ -60,17 +60,20 @@ open class MobileiaAuthentication{
         }
     }
     
-    open func signInWithEmail(email: String, password: String){
+    open func signInWithEmail(email: String, password: String, callbackI : @escaping (_ object: MIAUser) -> Void, callbackErrorI: @escaping (_ error: MIAErrorRest) -> Void) -> Void{
         let parameters = [
             "grant_type": "normal",
             "email": email,
             "password": password
-        ] as Parameters;
+            ] as Parameters;
         
         MIAAuthRest().oauth(parameters: parameters, callback: { (object) in
-            print("Se logueo correctamente: " + object.access_token);
+            
+            MIAAuthRest().me(accessToken: object.access_token, callback: callbackI, callbackError: callbackErrorI);
+            
         }) { (error) in
-            print("No pudo loguearse");
+            
+            callbackErrorI(error);
         };
     }
 }

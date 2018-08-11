@@ -12,6 +12,8 @@ import Alamofire
 
 open class MobileiaAuthentication{
     
+    public init(){}
+    
     open func signInWith(service: MIAAuthBaseService, callback: @escaping (_ object: MIAUser) -> Void, callbackError: @escaping (_ error: MIAErrorRest) -> Void){
         // Iniciamos proceso de inicio de sesion.
         service.signIn(callback: callback, callbackError: callbackError);

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MobileiaAuthenticationCore"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.swift_version = "4.0"
   s.summary      = "Libreria Authentication Core para MobileIA"
 
@@ -82,7 +82,7 @@ Esta la base para la creacion de servicios de autenticacion y librerias que son 
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/MobileIA/mia-authentication-ios.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/MobileIA/mia-authentication-ios.git", :tag => "0.0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

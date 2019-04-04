@@ -21,27 +21,32 @@ open class MIAAccessToken : Object, Decodable {
         return "id"
     }
     
-    /*enum MIAAccessTokenEnum: String, CodingKey {
+    enum MIAAccessTokenEnum: String, CodingKey {
         case id
         case app_id
         case user_id
         case access_token
     }
     
-    required convenience init(from decoder: Decoder) throws {
+    public required convenience init(from decoder: Decoder) throws {
         self.init();
         let container = try decoder.container(keyedBy: MIAAccessTokenEnum.self);
-        id = try container.decode(Int.self, forKey: .id)
-        app_id = try container.decode(Int.self, forKey: .app_id)
-        user_id = try container.decode(Int.self, forKey: .user_id)
-        access_token = try container.decode(String.self, forKey: .access_token)
-        
-        /*do{
-            //CP_Link = try container.decode(String.self, forKey: .CP_Link)
-        }catch{}
         do{
-            //CP_Barra = try container.decode(String.self, forKey: .CP_Barra)
-        }catch{}*/
-    }*/
+            id = try container.decode(Int.self, forKey: .id)
+        }catch{
+            id = Int(try container.decode(String.self, forKey: .id))!;
+        }
+        do{
+            app_id = try container.decode(Int.self, forKey: .app_id)
+        }catch{
+            app_id = Int(try container.decode(String.self, forKey: .app_id))!;
+        }
+        do{
+            user_id = try container.decode(Int.self, forKey: .user_id)
+        }catch{
+            user_id = Int(try container.decode(String.self, forKey: .user_id))!;
+        }
+        access_token = try container.decode(String.self, forKey: .access_token)
+    }
 }
 
